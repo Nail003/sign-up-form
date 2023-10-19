@@ -33,7 +33,9 @@ main {
 
 .left-section {
     flex: 1;
-    background: url("img/background.jpg") gray;
+    background: url("../img/background.jpg") gray;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
 }
 
