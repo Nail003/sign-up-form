@@ -2,19 +2,18 @@
     font-size: 62.5%;
 
     /* Colors */
-    --light-gray: #F9FAFB;
+    --light-gray: #f9fafb;
     --white: #fff;
-    --gray: #DDDEDE;
-    --green: #596D48;
+    --gray: #dddede;
+    --green: #596d48;
     --black: #000;
-    --blue: #1F4FD8;
-    --red: #C94E4E;
+    --blue: #1f4fd8;
+    --red: #c94e4e;
 
     /* Text Colors */
     --text-primary: black;
-    --text-secondary: #202A38;
-    --text-tertiary: #C7CACD;
-
+    --text-secondary: #202a38;
+    --text-tertiary: #c7cacd;
 }
 
 * {
@@ -34,7 +33,8 @@ h3 {
     font-size: 2rem;
 }
 
-b, i {
+b,
+i {
     font-size: inherit;
 }
 
@@ -62,7 +62,6 @@ main {
     justify-content: center;
     background: rgba(0, 0, 0, 0.4);
     padding: 8px 0px;
-    
 }
 
 .left-section img {
@@ -83,7 +82,6 @@ main {
     width: 100%;
     text-align: center;
     color: var(--white);
-
 }
 
 .left-section .footer-photo a {
@@ -98,12 +96,12 @@ main {
     padding: 0px 32px;
 }
 
-.right-section, form {
+.right-section,
+form {
     --gap: 32px;
     gap: var(--gap);
     display: flex;
     flex-direction: column;
-
 }
 
 .right-section p {
@@ -126,13 +124,14 @@ main {
     color: var(--text-secondary);
 }
 
-.form-card label, .form-card input {
-    font-size: 1.4rem;
+.form-card label,
+.form-card input {
+    font-size: 1.6rem;
     color: var(--text-secondary);
+    font-family: monospace;
 }
 
 .form-card label {
-    font-family: monospace;
     font-weight: bold;
 }
 
