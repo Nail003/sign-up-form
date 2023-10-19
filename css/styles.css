@@ -81,6 +81,7 @@ main {
     flex: 2;
     justify-content: center;
     background-color: var(--light-gray);
+    padding: 0px 32px;
 }
 
 .right-section, form {
@@ -95,8 +96,11 @@ main {
     flex-direction: column;
     gap: 16px;
     background-color: var(--white);
-    padding: 8px 4px;
+    padding: 8px 32px;
     box-shadow: 8px 8px 8px var(--gray);
+    width: calc(100% + 64px);
+    position: relative;
+    left: -32px;
 }
 
 .form-card label, .form-card input {
