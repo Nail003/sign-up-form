@@ -1,12 +1,20 @@
 :root {
     font-size: 62.5%;
+
+    /* Colors */
     --light-gray: #F9FAFB;
     --white: #fff;
     --gray: #DDDEDE;
     --green: #596D48;
+    --black: #000;
+    --blue: #1F4FD8;
+    --red: #C94E4E;
+
+    /* Text Colors */
     --text-primary: black;
     --text-secondary: #202A38;
     --text-tertiary: #C7CACD;
+
 }
 
 * {
@@ -15,6 +23,7 @@
     padding: 0;
     appearance: none;
     font-size: 1rem;
+    font-family: sans-serif;
 }
 
 h1 {
@@ -25,6 +34,10 @@ h3 {
     font-size: 2rem;
 }
 
+b, i {
+    font-size: inherit;
+}
+
 main {
     display: flex;
     flex-direction: row;
@@ -33,7 +46,7 @@ main {
 
 .left-section {
     flex: 1;
-    background: url("../img/background.jpg") gray;
+    background: url("../img/background.jpg") var(--green);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -47,7 +60,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.418);
+    background: rgba(0, 0, 0, 0.4);
     padding: 8px 0px;
     
 }
@@ -57,9 +70,10 @@ main {
 }
 
 .left-section h1 {
-    color: white;
+    color: var(--white);
     display: flex;
     align-items: center;
+    font-family: cursive;
 }
 
 .left-section .footer-photo {
@@ -68,12 +82,12 @@ main {
     bottom: 8px;
     width: 100%;
     text-align: center;
-    color: white;
+    color: var(--white);
 
 }
 
 .left-section .footer-photo a {
-    color: white;
+    color: var(--white);
     font-size: 1.2rem;
 }
 
@@ -85,10 +99,15 @@ main {
 }
 
 .right-section, form {
-    gap: 32px;
+    --gap: 32px;
+    gap: var(--gap);
     display: flex;
     flex-direction: column;
 
+}
+
+.right-section p {
+    font-size: 1.6rem;
 }
 
 .form-card {
@@ -96,21 +115,42 @@ main {
     flex-direction: column;
     gap: 16px;
     background-color: var(--white);
-    padding: 8px 32px;
+    padding: 8px var(--gap);
     box-shadow: 8px 8px 8px var(--gray);
-    width: calc(100% + 64px);
+    width: calc(100% + var(--gap) + var(--gap));
     position: relative;
     left: -32px;
 }
 
+.form-card h3 {
+    color: var(--text-secondary);
+}
+
 .form-card label, .form-card input {
     font-size: 1.4rem;
+    color: var(--text-secondary);
+}
+
+.form-card label {
+    font-family: monospace;
+    font-weight: bold;
 }
 
 .form-card input {
     width: 90%;
     padding: 4px;
-    border: 1px solid black;
+    border: 1px solid var(--black);
+    border-radius: 4px;
+}
+
+.form-card input:focus {
+    outline: none;
+    border: 2px solid var(--blue);
+    box-shadow: 4px 4px 4px var(--gray);
+}
+
+.form-card input:invalid {
+    border-color: var(--red);
 }
 
 .form-card fieldset {
@@ -126,7 +166,7 @@ main {
 
 form a {
     font-size: 1.6rem;
-    color: green;
+    color: var(--green);
     text-decoration: none;
 }
 
@@ -137,7 +177,7 @@ form button {
     padding: 8px 0px;
     border: none;
     background-color: var(--green);
-    color: white;
+    color: var(--white);
     border-radius: 4px;
     transition: scale 100ms linear;
 }
@@ -148,12 +188,4 @@ form button:hover {
 
 form button:active {
     scale: 0.95;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.right-section p {
-    font-size: 1.6rem;
 }
